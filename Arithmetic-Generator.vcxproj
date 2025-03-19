@@ -128,12 +128,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\LinB\Desktop\expresion_generate.cpp" />
+    <ClCompile Include="expresion_generate.cpp" />
     <ClCompile Include="fraction.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.h" />
+    <ClInclude Include="generation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

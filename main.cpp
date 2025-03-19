@@ -1,1 +1,5 @@
-#include "main.h"
+#include "generation.h"
+
+int main() {
+
+}

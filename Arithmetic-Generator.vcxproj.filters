@@ -21,12 +21,12 @@
     <ClCompile Include="fraction.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\LinB\Desktop\expresion_generate.cpp">
+    <ClCompile Include="expresion_generate.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.h">
+    <ClInclude Include="generation.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
