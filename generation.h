@@ -5,18 +5,20 @@
 #include <cstdlib>  // 用于 rand() 和 srand()
 #include <ctime>    //初始化随机种子
 #include <string>
-#include <sstream>
-#include <fstream>
+#include <sstream>  //
+#include <fstream>  //输出文件流
+#include <vector>
+#include <stack>
 using namespace std;
 
+#ifndef FRACTION_H
+#define FRACTION_H
 class Fraction {
-private:
+
+public:
 	int integer;
 	int numerator;
 	int denominator;
-
-public:
-
 	//析构函数
 	Fraction(int num = 0, int den = 1);
 	Fraction(int integerpart, int num, int den);
@@ -30,8 +32,23 @@ public:
 	Fraction operator * (const Fraction& other) const;
 	//除法
 	Fraction operator / (const Fraction& other) const;
-	//允许从字符串流读取 Fraction 对象
-	friend istream& operator>>(istream& in, Fraction& frac);
 	//输出格式
-	string toString() const;
+	string toString();
 };
+#endif
+
+
+int generate_integer(int n);
+Fraction generate_fraction(int n);
+bool ifgenerateFraction();
+char generateOperator();
+
+bool isOperator(char c);
+int getOperatorPrecedence(char op);
+vector<string> infixToPostfix(const string& expression);
+Fraction evaluatePostfix(const vector<string>& postfix);
+Fraction calculate(const string& expression);
+Fraction generate_fraction_with_max(int range, const Fraction& max_value);
+Fraction parseResult(const std::string& result_str);
+string generate_Problem(string& problem, int r);
+
