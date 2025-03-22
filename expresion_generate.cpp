@@ -83,60 +83,6 @@ vector<string> infixToPostfix(const string& expression) {
     return postfix;
 }
 
-// 计算后缀表达式的值
-//Fraction evaluatePostfix(const vector<string>& postfix) {
-//    std::stack<Fraction> stack;
-//
-//    for (const auto& token : postfix) {
-//        if (isdigit(token[0]) || token.find('/') != string::npos) {
-//            // 操作数
-//            int num = 0;
-//            int den = 1;
-//            if (token.find('/') != string::npos) {
-//                size_t pos = token.find('/');
-//                num = stoi(token.substr(0, pos));
-//                den = stoi(token.substr(pos + 1));
-//            }
-//            else {
-//                num = std::stoi(token);
-//            }
-//            stack.push(Fraction(num, den));
-//        }
-//        else if (isOperator(token[0])) {
-//            // 运算符
-//            if (stack.size() < 2) {
-//                throw std::runtime_error("Insufficient operands for operation");
-//            }
-//            Fraction b = stack.top();
-//            stack.pop();
-//            Fraction a = stack.top();
-//            stack.pop();
-//
-//            Fraction result(0, 1);
-//            switch (token[0]) {
-//            case '+':
-//                result = a + b;
-//                break;
-//            case '-':
-//                result = a - b;
-//                break;
-//            case '*':
-//                result = a * b;
-//                break;
-//            case '/':
-//                result = a / b;
-//                break;
-//            }
-//            stack.push(result);
-//        }
-//    }
-//
-//    if (stack.size() != 1) {
-//        return stack.top();
-//    }
-//
-//    return stack.top();
-//}
 Fraction evaluatePostfix(const vector<string>& postfix) {
     std::stack<Fraction> stack;
 
